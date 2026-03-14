@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/INDEX.HTML -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Booking</title>
+  <link rel="stylesheet" href="./Hotel Booking_files/style.css">
+</head>
+<body>
+  <header>
+    <h1>BRIGHTON GRAND PLAZA HOTEL</h1>
+    <nav>
+      <ul>
+        <li><a href="http://127.0.0.1:5500/INDEX.HTML#rooms">Rooms</a></li>
+        <li><a href="http://127.0.0.1:5500/INDEX.HTML#menu">Food Menu</a></li>
+        <li><a href="http://127.0.0.1:5500/INDEX.HTML#booking">Booking</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="rooms">
+    <h2>Accommodation</h2>
+    <div class="room">
+      <h3>Deluxe Room</h3>
+      <p>Spacious room with king-size bed, free Wi-Fi, and balcony view.</p>
+      <p class="price">$120 per night</p>
+    </div>
+    <div class="room">
+      <h3>Standard Room</h3>
+      <p>Comfortable room with queen-size bed and free breakfast.</p>
+      <p class="price">$80 per night</p>
+    </div>
+    <div class="room">
+      <h3>Suite</h3>
+      <p>Luxury suite with living area, jacuzzi, and premium service.</p>
+      <p class="price">$200 per night</p>
+    </div>
+  </section>
+
+  <section id="menu">
+    <h2>Food Menu</h2>
+    <ul class="menu-list">
+      <li>Grilled Chicken - $15</li>
+      <li>Vegetable Pasta - $12</li>
+      <li>Beef Steak - $20</li>
+      <li>Caesar Salad - $10</li>
+      <li>Fresh Juice - $5</li>
+    </ul>
+  </section>
+
+  <section id="booking">
+    <h2>Book Your Stay</h2>
+    <form>
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" required="">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required="">
+
+      <label for="room">Select Room:</label>
+      <select id="room">
+        <option>Deluxe Room - $120</option>
+        <option>Standard Room - $80</option>
+        <option>Suite - $200</option>
+      </select>
+
+      <label for="checkin">Check-in Date:</label>
+      <input type="date" id="checkin" required="">
+
+      <label for="checkout">Check-out Date:</label>
+      <input type="date" id="checkout" required="">
+
+      <button type="submit">Book Now</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2026 Grand Paradise Hotel. All rights reserved.</p>
+  </footer>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
